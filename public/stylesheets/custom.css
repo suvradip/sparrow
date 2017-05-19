@@ -1,0 +1,44 @@
+.navigation {
+  background-color: #ef6c00; }
+
+.brand-logo {
+  margin-left: 25px; }
+
+#slide-out {
+  top: 64px; }
+
+.button-collapse {
+  color: #546e7a; }
+
+.side-layout {
+  height: 300px;
+  background-color: #90a4ae; }
+
+.status-message {
+  margin-bottom: 5px !important; }
+  .status-message .input-field .prefix.active {
+    color: #546e7a !important; }
+  .status-message .btn {
+    color: #ffab40;
+    background: #546e7a;
+    float: right;
+    width: 100px; }
+    .status-message .btn:hover, .status-message .btn:focus {
+      background: #5e7580; }
+
+.status-action a {
+  text-transform: none !important;
+  cursor: pointer; }
+
+.status-action i {
+  padding: 0 5px; }
+
+.status-action .badge {
+  color: #fbfafa;
+  margin: 0;
+  vertical-align: super;
+  float: none; }
+
+.load-more {
+  text-align: center;
+  cursor: pointer; }

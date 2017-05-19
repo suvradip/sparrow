@@ -1,0 +1,21 @@
+{
+  "name": "sparrow",
+  "description": "demo project using Materialize design",
+  "main": "server.js",
+  "authors": [
+    "Suvradip Saha <suvradip@fusioncharts.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "materialize": "^0.98.2"
+  }
+}

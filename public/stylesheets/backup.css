@@ -1,0 +1,45 @@
+h1 {
+    color:red;
+}
+
+
+.navigation {
+    background-color: #ef6c00 ;
+}
+
+.brand-logo{
+    margin-left: 25px;
+}
+
+.side-layout {
+    height: 300px;
+    background-color: #90a4ae;
+
+}
+
+.status-message {
+    margin-bottom: 5px !important;
+}
+.status-message .input-field .prefix.active {
+    color: #546e7a !important;
+}
+
+
+.status-action a {
+    text-transform:none !important;
+    cursor: pointer;
+}
+.status-action i{
+    padding: 0 5px;
+}
+.status-action .badge {
+    color: #fbfafa;
+    margin: 0;
+    vertical-align: super;
+    float: none;
+}
+
+.load-more {
+    text-align: center;
+    cursor: pointer;
+}

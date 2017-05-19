@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head.ejs %>
+  <body>
+    <!-- Navbar goes here -->
+    <div class="row">
+        <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Sparrow</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!--<li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>-->
+      </ul>
+    </div>
+  </nav>
+    </div>
+    <!-- Page Layout here -->
+    <div class="row">
+
+      <div class="col s3">
+        <!-- Grey navigation panel -->
+        <ul id="slide-out" class="side-nav">
+            <li><div class="userView">
+            <div class="background">
+                <img src="/images/office.jpg">
+            </div>
+            <a href="#!user"><img class="circle" src="/images/yuna.jpg"></a>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+            <li><a href="#!">Second Link</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Subheader</a></li>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+
+      <div class="col s9" ng-app="sparrow-posts">
+        <!-- Teal page content  -->
+        
+        <div class="row status-message" ng-controller="status">
+            <div class="row">
+                <div class="input-field col s12 m8">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="textarea1" class="materialize-textarea" ng-model="statusMessage"></textarea>
+                    <label for="textarea1">What's on your mind</label>
+                    <button class="btn waves-effect waves-light" type="submit" ng-click="postStatus()">
+                        post<i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+              
+        
+        <div ng-controller="feed" >
+            <div class="row status-card" ng-if="dummyData && dummyData.length > 0" ng-repeat="item in dummyData">
+                <div class="col s12 m8">
+                    <div class="chip">
+                        <img ng-src="/images/{{ item.picture }}" alt="Contact Person">
+                        {{ item.name }}
+                    </div> 
+                <div class="card blue-grey darken-1">
+                    
+                    <div class="card-content white-text">
+                    <p>{{ item.status }}</p>
+                    </div>
+                    <div class="card-action status-action">
+                    <a href="#"><i class="material-icons tiny">thumb_up</i>Like<span class="badge">
+                        {{ item.like === 0 ? null : item.like }}</span></a>
+                    <a href="#"><i class="material-icons tiny">thumb_down</i>Dislike<span class="badge">
+                        {{ item.dislike === 0 ? null : item.dislike }}</span></a>
+                    <a href="#"><i class="material-icons tiny">comment</i>Comment<span class="badge">
+                        {{ item.comment === 0 ? null :item.comment }}</span></a>              
+                    </div>
+                </div>
+                </div>
+        </div>
+      </div>
+
+
+
+      <div class="row load-more">
+        <div class="col s12 m8"> 
+            <div class="chip ">
+                Load more<i class="close material-icons">loop</i>
+            </div>  
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+  </body>
+  <script>
+    
+    $(document).ready(function(){
+        $(".button-collapse").sideNav();
+        //initial position set
+        $("#slide-out").css("top", $(".nav-wrapper").height());
+        $(window).resize(function(){
+            $("#slide-out").css("top", $(".nav-wrapper").height());
+        });
+    });
+    $
+  </script>
+</html>
